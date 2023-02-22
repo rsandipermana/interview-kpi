@@ -1,15 +1,16 @@
 import {
-  Entity,
-  PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
+  Entity,
   UpdateDateColumn,
+  ObjectIdColumn,
 } from 'typeorm';
+import { ObjectId } from 'mongoose';
 
 @Entity()
 export class User {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @ObjectIdColumn()
+  id: ObjectId;
 
   @Column()
   name: string;

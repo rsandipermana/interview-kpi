@@ -1,19 +1,20 @@
 import {
   Entity,
-  PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
   UpdateDateColumn,
   ManyToOne,
   OneToMany,
+  ObjectIdColumn,
 } from 'typeorm';
+import { ObjectId } from 'mongoose';
 import { Activity } from './activity.entity';
 import { Course } from './course.entity';
 
 @Entity()
 export class Module {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @ObjectIdColumn()
+  id: ObjectId;
 
   @Column()
   name: string;
