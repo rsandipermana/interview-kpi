@@ -10,7 +10,7 @@ import {
   HttpStatus,
 } from '@nestjs/common';
 import { ObjectId } from 'mongoose';
-import { User } from 'src/schemas/user.schema';
+import { User } from 'src/entities/schemas/user.schema';
 import { UserService } from './user.service';
 
 @Controller('user')
